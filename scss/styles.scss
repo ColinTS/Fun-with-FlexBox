@@ -1,17 +1,169 @@
 // Imports
-
+@import 'partials/reset';
+@import 'partials/clearfix';
+@import 'partials/general_styles';
 
 
 // 1. Many small items in a grid
+// @media screen and (max-width: 900px){}
 
+//   .small-grid-flexbox ul {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     // border: 1px solid red;
+// }
+//   .small-grid-flexbox li {
+//     flex-basis: 9.7%;
+//     height: 30px;
+//     text-align: center;
+//     // border: 1px solid red;
+//     // align-items: stretch;
+// }
+
+.small-grid-flexbox ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  li {
+    box-sizing: border-box;
+    line-height: 28px;
+    text-align: center;
+    flex: 0 0 10%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .small-grid-flexbox ul {
+    width: 400px;
+    li {
+      height: 40px;
+    }
+  }
+}
 
 
 // 2. 2-Column Grid
 
+@media screen and (min-width: 900px){
 
+  .two-col-grid-flexbox {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: no-wrap;
+  }
+
+  .column-2{
+      flex:1;
+
+    }
+
+    .column-1{
+      flex:1;
+    }
+
+
+}
 
 // 3. Centering
 
+.centering-formula-1 {
+  display: flex;
+  align-items: center;
+  .centered {
+        width: 100%;
+      }
+
+
+}
+
+.centering-formula-2 {
+  display: flex;
+  align-items: center;
+  .centered {
+        width: 100%;
+      }
+}
 
 
 // 4. Ordering
+
+@media screen and (max-width: 900px){
+  .ordering-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-c {
+    order: 1;
+  }
+
+  .item-b {
+    order: 2;
+  }
+
+  .item-a {
+    order: 3;
+  }
+
+  .item-d {
+    order: 4;
+  }
+
+}
+
+@media screen and (min-width: 901px){
+  .ordering-block {
+    display: flex;
+
+  }
+
+  .item-c {
+    width: 20%;
+  }
+
+  .item-b {
+    width: 30%;
+  }
+
+  .item-a {
+    width: 10%;
+  }
+
+  .item-d {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+
+  .ordering-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item-d {
+      order: 1;
+      width: 5%;
+    }
+
+    .item-c {
+      order: 2;
+      width: 20%;
+    }
+
+    .item-b {
+      order: 3;
+      width: 4%;
+    }
+
+    .item-a{
+      order: 4;
+      width: 40%;
+    }
+}
+
+
+
